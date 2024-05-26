@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Lavne\\OneDrive\\Documents\\Work\\DAIICT\\PhD\\PaperAuthoring\\Industry Survey\\Survey_v3\\Survey_v3\\SurveyWebApp\\SurveyWebApp\\SurveyWebApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Lavne\\OneDrive\\Documents\\Work\\DAIICT\\PhD\\PaperAuthoring\\Industry Survey\\Survey_v3\\Survey_v3\\SurveyWebApp\\SurveyWebApp\\SurveyWebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Lavne\\OneDrive\\Documents\\Work\\DAIICT\\PhD\\PaperAuthoring\\Industry Survey\\Survey_v3\\Survey_v3\\SurveyWebApp\\SurveyWebApp\\SurveyWebApp.csproj",
+        "projectName": "SurveyWebApp",
+        "projectPath": "C:\\Users\\Lavne\\OneDrive\\Documents\\Work\\DAIICT\\PhD\\PaperAuthoring\\Industry Survey\\Survey_v3\\Survey_v3\\SurveyWebApp\\SurveyWebApp\\SurveyWebApp.csproj",
+        "packagesPath": "C:\\Users\\Lavne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lavne\\OneDrive\\Documents\\Work\\DAIICT\\PhD\\PaperAuthoring\\Industry Survey\\Survey_v3\\Survey_v3\\SurveyWebApp\\SurveyWebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lavne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.22.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
