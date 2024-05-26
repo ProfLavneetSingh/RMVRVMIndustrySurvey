@@ -1,0 +1,88 @@
+1. Script for Spearman correlation between developers and architects.
+import random
+from scipy.stats import spearmanr
+
+# Example data (replace this with your actual data)
+column1 = [1, 1, 1, 39, 1, 1, 1, 1, 1, 39, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 39, 1, 1, 39, 1, 1, 1, 39, 39, 1, 1, 39, 1, 1, 1, 1, 1, 47, 39, 1, 1, 1]
+column2 = [1, 1, 1, 1, 1, 15, 1, 1, 15, 1, 15, 1, 1, 15, 15, 15, 1, 1, 15, 1, 1]
+
+# Set the number of iterations
+num_iterations = 1000
+
+# Initialize arrays to store τ values and corresponding p-values
+tau_values = []
+p_values = []
+
+# Calculate Spearman correlation coefficient and p-value for each iteration
+for _ in range(num_iterations):
+    # Randomly select a subset of rows from column1
+    random.seed()  # Seed with current time for random selection each iteration
+    num_rows = min(len(column1), len(column2))
+    random_indices = random.sample(range(len(column1)), num_rows)
+    column1_random_subset = [column1[i] for i in random_indices]
+
+    # Truncate the selected subset to match the length of column2
+    column1_truncated = column1_random_subset[:len(column2)]
+
+    # Calculate Spearman correlation coefficient and p-value
+    tau, p_value = spearmanr(column1_truncated, column2)
+
+    # Store τ value and corresponding p-value if p-value is less than 0.0007
+    if p_value < 0.0007:
+        tau_values.append(tau)
+        p_values.append(p_value)
+
+# Sort the τ values and their corresponding p-values
+sorted_tau_p_values = sorted(zip(tau_values, p_values))
+
+# Print the sorted τ values and corresponding p-values
+print("Sorted τ values and corresponding p-values for p-value < 0.0007:")
+for tau_value, p_value in sorted_tau_p_values:
+    print("τ:", tau_value, "  p-value:", p_value)
+	
+2. Script for Spearman correlation between online survey and interviews
+
+import random
+from scipy.stats import spearmanr
+
+# Example data (replace this with your actual data)
+column1 = [6, 6, 16, 16, 12, 4, 55, 1, 14, 16, 6, 50, 38, 22, 6, 28, 53, 16, 12, 51, 43, 43, 29, 66, 40, 43, 24, 1, 40, 68, 56, 52, 29, 65, 29, 14, 43, 60, 24, 29, 6, 22, 11, 62, 16, 43, 4, 3, 58, 29, 37, 43, 64, 67, 16, 39, 40, 24, 29, 60, 63, 29, 43, 29, 59, 53, 57, 24
+
+]
+column2 = [8, 1, 2, 2, 4, 4, 4, 7, 9
+
+]
+
+# Set the number of iterations
+num_iterations = 1000
+
+# Initialize arrays to store τ values and corresponding p-values
+tau_values = []
+p_values = []
+
+# Calculate Spearman correlation coefficient and p-value for each iteration
+for _ in range(num_iterations):
+    # Randomly select a subset of rows from column1
+    random.seed()  # Seed with current time for random selection each iteration
+    num_rows = min(len(column1), len(column2))
+    random_indices = random.sample(range(len(column1)), num_rows)
+    column1_random_subset = [column1[i] for i in random_indices]
+
+    # Truncate the selected subset to match the length of column2
+    column1_truncated = column1_random_subset[:len(column2)]
+
+    # Calculate Spearman correlation coefficient and p-value
+    tau, p_value = spearmanr(column1_truncated, column2)
+
+    # Store τ value and corresponding p-value if p-value is less than 0.0035
+    if p_value < 0.0035:
+        tau_values.append(tau)
+        p_values.append(p_value)
+
+# Sort the τ values and their corresponding p-values
+sorted_tau_p_values = sorted(zip(tau_values, p_values))
+
+# Print the sorted τ values and corresponding p-values
+print("Sorted τ values and corresponding p-values for p-value < 0.0035:")
+for tau_value, p_value in sorted_tau_p_values:
+    print("τ:", tau_value, "  p-value:", p_value)
